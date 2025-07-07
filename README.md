@@ -1,4 +1,3 @@
-# GEE-data-extraction
 
 # 🌎 Climate Data Extraction for Digital Twins in Chicago
 
