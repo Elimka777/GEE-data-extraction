@@ -1,9 +1,9 @@
-// Load DAYMET V4 daily temperature data (both tmax and tmin)
+// Loading DAYMET V4 daily temperature data (both tmax and tmin)
 var daymetv4 = ee.ImageCollection('NASA/ORNL/DAYMET_V4')
   .filterDate('2023-07-01', '2023-07-05')
   .select(['tmax', 'tmin']);
 
-// Compute daily max and min temperatures over the region
+// Computing daily max and min temperatures over the region
 var dailyTemps = daymetv4.map(function(image) {
   var maxTemp = image.reduceRegion({
     reducer: ee.Reducer.max(),
@@ -36,7 +36,7 @@ var tempVis = {
 // Center map
 Map.centerObject(geometry, 7);
 
-// Add both Tmax and Tmin layers to the map
+// Adding both Tmax and Tmin layers to the map
 dailyTemps.evaluate(function(collectionInfo) {
   var images = collectionInfo.features;
   images.forEach(function(feature) {
@@ -47,7 +47,7 @@ dailyTemps.evaluate(function(collectionInfo) {
   });
 });
 
-// Convert ImageCollection to FeatureCollection for charting
+// Converting ImageCollection to FeatureCollection for charting
 var temperatureFeatures = dailyTemps.map(function(image) {
   return ee.Feature(null, {
     'date': image.get('date'),
@@ -73,7 +73,7 @@ var chart = ui.Chart.feature.byFeature({
 });
 print(chart);
 
-// Export to CSV
+// Exporting to CSV
 Export.table.toDrive({
   collection: temperatureTable,
   description: 'DAYMETV4_Daily_Temp',
@@ -99,7 +99,7 @@ var exportImage = function(image) {
   });
 };
 
-// Export all images
+// Exporting all images
 daymetv4.toList(daymetv4.size()).evaluate(function(imageList) {
   imageList.forEach(function(feature) {
     var image = ee.Image(feature.id);
