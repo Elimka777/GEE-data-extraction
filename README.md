@@ -4,7 +4,7 @@ This repository supports the development of **digital twin** for Chicago by extr
 
 ## Purpose
 
-We use satellite-based Earth observation data to support urban modeling, simulations, and predictive analytics in the context of digital twin development. The focus is on extracting short-term historical climate and environmental data over the Chicago metropolitan area.
+To use satellite-based Earth observation data to support urban modeling, simulations, and predictive analytics in the context of digital twin development. The focus is on extracting short-term historical climate and environmental data over the Chicago metropolitan area.
 
 ## Features
 
