@@ -18,4 +18,5 @@ We use satellite-based Earth observation data to support urban modeling, simulat
   - Soil Moisture
 
 > Filters by date range (between 2023-2024)
+
 > Supports export to GeoTIFF (for raster data)
