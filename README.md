@@ -1,7 +1,7 @@
 
 # 🌎Climate Data Extraction for Digital Twins in Chicago
 
-This repository supports the development of **digital twins** in Chicago by extracting essential climate and environmental variables using **Google Earth Engine (GEE)**.
+This repository supports the development of **digital twin** for Chicago by extracting essential climate and environmental variables using **Google Earth Engine (GEE)**.
 
 ## ✍️Purpose
 
@@ -17,9 +17,8 @@ We use satellite-based Earth observation data to support urban modeling, simulat
   - Topography (e.g., elevation, slope)
   - Wind Speed
   - Soil Moisture
-- Filters by date range:
-  ```javascript
-  .filterDate('2023-07-01', '2023-07-05')
+
+- Filters by date range (between 2023-2024)
 - Supports export to:
   CSV (for tabular data)
   GeoTIFF (for raster data)
