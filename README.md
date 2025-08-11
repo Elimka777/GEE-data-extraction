@@ -1,6 +1,5 @@
 
-# 🌎Climate Data Extraction for Digital Twins in Chicago
-
+# 🌎Climate Data Extraction for Digital Twin of Chicago Area 
 This repository supports the development of **digital twin** for Chicago by extracting essential climate and environmental variables using **Google Earth Engine (GEE)**.
 
 ## ✍️Purpose
